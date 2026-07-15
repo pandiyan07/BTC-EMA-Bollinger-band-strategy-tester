@@ -1,71 +1,3 @@
-'''
-Please Give me a pinescript version-5 code by categorising the code in this below 7 steps =
-
-2)  Calculate strategy values -
--   The Bollinger band should be of 9 EMA middle band and 2 Standard deviation
--   The RSI should be a 5 period RSI along with a 5 EMA plotted on this RSI, the overbought zone should be set at 60 and the oversold zone should be set at 40
-
-3)  Output strategy data -
--   plot the bollinger band 9 EMA line should be of blue colour and the upper & lower band should be of red and green colour respectively
--   plot the 5 period RSI in grey colour and 5ema plotted on the 5 period RSI in blue colour, with the space in between the 60 overbought zone and 40 oversold zone in light yellow colour
-
-4)  Determine long trading conditions 
--   Condition 1 - the distance between the upper bollinger bands and the lower bollinger band should be more than 60 rupees/points 
--   Condition 2 - at the same time 5EMA line plotted on the 5 period RSI should go above the overbought zone of 60 
--   Both these above conditions should be fulfilled at the same time for a Long trade to be executed
-
-5)  Determine long trade exit conditions -
-The long trade should be exited only when the 5EMA line plotted on the 5 period RSI should go below the overbought zone of 60 
-
-6)  Determine Short trading conditions 
--   Condition 1 - the distance between the upper bollinger bands and the lower bollinger band should be above 60 rupees/points 
--   Condition 2 - at the same time 5EMA line plotted on the 5 period RSI should go under the oversold zone of 40 
--   Both these above conditions should be fulfilled at the same time for a Short sell to be executed
-
-7)  Determine short selling trade exit conditions -
-The short selling trade should be exited only when the 5EMA line plotted on the 5 period RSI should go above the overbought zone of 40 
-
-8)  Determine the stop loss conditions -
-The initial stop loss for both the buy and short selling trades should be  
-20 rupees less than the trade entry price, if the current trading price is 52,120 then the initial SL should be 52,100
-.
-As the profit_amount starts to increase and cross 20 rupees (where, profit_amount = current trading price - trade entry price)  then the the stop loss should be changed to a trialing stop loss of 10% from the profit_amount
-
-9)  Submit entry orders
-
-10)  Submit exit orders
-'''
-
-
-
-
-
-
-
-#BBB_9_2.0 (Bollinger Band Basis or Middle Band):
-'''
--   This represents the "Bollinger Band Basis," which is essentially
-the middle line of the Bollinger Bands. It is typically the moving average 
-(in this case, an Exponential Moving Average) over a specified period.
--   It is equivalent to BBM (Bollinger Band Middle) in standard Bollinger Bands terminology.
-'''
-#BBP_9_2.0 (Bollinger Band %B):
-'''
--   This represents the "%B" or Bollinger Band Percent.
-It measures the position of the price relative to the Bollinger Bands.
--   %B is calculated as follows:
-BBP = Price - Lower Band / Upper Band - Lower Band
--   %B shows how far the price is from the lower band as a percentage of the 
-total width of the Bollinger Bands. A %B value of 0 indicates the price is
-at the lower band, while a value of 1 indicates the price is at the upper band.
-'''
-
-
-
-
-
-
-
 import pandas as pd
 import pandas_ta as ta
 import yfinance as yf
@@ -446,7 +378,7 @@ from tvDatafeed import TvDatafeed, Interval
 tv = TvDatafeed()
 RSI_BOLLINGER_BAND_CALCULATOR(0)
 
-'''
+
 def DATA_FETCHER():
     #tv_bank_nifty = tv.get_hist(symbol='BANKNIFTY',exchange='NSE',interval=Interval.in_1_minute,n_bars=10)
     
@@ -468,4 +400,3 @@ def DATA_FETCHER():
         RSI_BOLLINGER_BAND_CALCULATOR(tv_bank_nifty)
 
 DATA_FETCHER()
-'''
