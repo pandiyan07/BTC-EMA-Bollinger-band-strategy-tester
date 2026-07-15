@@ -7,7 +7,8 @@ Built on - July 2024
 A Python-based backtesting engine that evaluates Bollinger Band
 (9-period) trend-following trades, simulates long/short positions,
 applies trailing stop-loss logic, and generates detailed trade
-performance statistics.
+performance statistics. The main backtesting for loop iterates 
+sequentially one by one on the CPU (not parallely)
 
 ## Table of Contents
 
