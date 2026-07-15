@@ -1,5 +1,7 @@
 # Project Title
 
+Built on - July 2024
+
 **Strategy Tester -- Bollinger Band EMA Trading Backtester**
 
 A Python-based backtesting engine that evaluates Bollinger Band
@@ -70,8 +72,8 @@ integration using TradingView.
 ### Installation
 
 ``` bash
-git clone https://github.com/yourusername/strategy-tester.git
-cd strategy-tester
+git clone https://github.com/pandiyan07/BTC-EMA-Bollinger-band-strategy-tester.git
+cd BTC-EMA-Bollinger-band-strategy-tester
 pip install pandas pandas-ta yfinance tvDatafeed
 python Strategy_tester_BB_9EMA_130.py
 ```
