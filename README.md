@@ -1,7 +1,5 @@
 # Project Title
 
-Built on - July 2024
-
 **Strategy Tester -- Bollinger Band EMA Trading Backtester**
 
 A Python-based backtesting engine that evaluates Bollinger Band
@@ -9,6 +7,8 @@ A Python-based backtesting engine that evaluates Bollinger Band
 applies trailing stop-loss logic, and generates detailed trade
 performance statistics. The main backtesting for loop iterates 
 sequentially one by one on the CPU (not parallely)
+
+Built on - July 2024
 
 ## Table of Contents
 
