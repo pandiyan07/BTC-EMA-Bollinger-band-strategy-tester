@@ -1,6 +1,6 @@
 # Project Title
 
-**Strategy Tester -- Bollinger Band EMA Trading Backtester**
+**Strategy Tester - Bollinger Band EMA Trading Backtester**
 
 A Python-based backtesting engine that evaluates Bollinger Band
 (9-period) trend-following trades, simulates long/short positions,
